@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">    <title>MATCH-MATCH-GAME</title>
+    <link rel="stylesheet" href="/style/header.css"> 
+    <link rel="stylesheet" href="/style/game.css">
+    <link rel="stylesheet" href="/style/body.css">
+    <link rel="stylesheet" href="/style/StartBut.css">
+    <link rel="stylesheet" href="/style/winform.css">
+    <link rel="stylesheet" href="/style/profile.css">
+    <link rel="stylesheet" href="/style/reg.css">
+    <style>
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="conteinerForLogo" href="game.html" style="text-decoration: none;">  
+           <div class="rectangles">
+                <div class="rectangle1">
+                    <span class="header-text-1">MATCH</span>
+                </div>
+                <div class="rectangle2">
+                    <span class="header-text-2">MATCH</span>
+                </div>
+            </div>
+        </a>
+        <div class="conrainerForPages">
+            <div class="info_but">
+                <a href="/pages/index.html">
+                    <div class="cycle1">
+                        <span class="symbol">?</span>
+                    </div>
+                    <p>About Game</p>
+                </a>
+                <a href="/pages/score.html">
+                    <div class="cycle2">
+                        <span class="star">&#9733</span>
+                    </div>
+                    <p>Best Score</p>
+                </a>
+                <a href="/pages/setting.html">
+                    <div class="cycle3">
+                        <span class="steam">&#9881</span>
+                    </div>
+                    <p>Game Settings</p>
+                </a>
+            </div>
+        </div>        
+        <div class="GameStart">
+            <button id="start" class="startGame">START GAME</button>
+            <button id="stop" class="stopGame">STOP GAME</button>
+        </div>
+        <div class="containerForReg">
+            <button id="openReg">REGISTER NEW PLAYER</button>
+            <button id="startGameBtn" class="hidden" style="display: none; width: 129px; height: 36px; margin-top: 14px; margin-right: 30px; font-weight: bold; letter-spacing: 0.5px; ">START GAME</button>
+            <img class="avatar" id="userImg" src="/picture/adadadadadadadadad.jpg" alt="avatar" style="cursor:pointer; display:none; width: 40px; height: 40px; margin-right: 21px; margin-top: 12px;">
+            <span id="userName" style="display:none;"></span>
+            <div class="Reg hidden" id="registration">
+                <div class="Reg-content">
+                    <h2>Registr new Player</h2>
+                    <form id="registrationForm">
+                       <div class="RegForm">
+                            <div class="Inputs">
+                                <input type="text" id="firstName" placeholder="First Name" required>
+                                <br>
+                                <input type="text" id="lastName" placeholder="Last Name" required>
+                                <br>
+                                <input type="email" id="email" placeholder="E-mail" required>
+                                <br>
+                            </div>
+                            <input id="UserIMG" class="UserAvatar" name="MyFile" type="file">
+                        </div>
+                        <div class="YNButton">
+                            <button id="addButton" type="submit">ADD USER</button>
+                            <button id="cancelButton" type="button">CANCEL</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="modalClose" class="close">&times;</span>
+            <img id="modalUserImg" src="" alt="User Avatar"><br>
+            <span style="font-weight: bold; letter-spacing: 1px;">NAME: <hr><p id="modalName" style="font-weight: 100;"></p></span><br>
+            <span style="font-weight: bold; letter-spacing: 1px;">E-MAIL: <hr><p id="modalEmail" style="font-weight: 100;"></p></span><br>
+            <button id="logoutBtn">LOGOUT</button>
+        </div>
+    </div>
+    <main>
+        <div class="rules">
+            <div class="timer">
+                <p id="timer">05:00</p>
+            </div>
+            <section class="memory-game" id="memory-game"></section>
+            <div class="box">
+                <img>
+            </div>
+        </div>
+        </section>
+        </div>
+        <div class="win" id="win-message">
+            <div class="win-content">
+                <span>Congratulations! You succsessflully found all mathches on <span id="winTime"></span> minute.
+                </span>
+                <p>Score: <span id="score"></span></p>
+                <p>Misstakes: <span id="misstakes"></span></p>
+                <button id="accept">OK</button>
+            </div>
+        </div>
+    </main>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="/scripts/score.js"></script>
+    <script src="/scripts/game.js"></script>
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/profile.js"></script>
+    <script>
+        let selectedDifficulty = localStorage.getItem('selectedDifficulty') || 'medium';
+        document.getElementById('setdif').value = selectedDifficulty;
+    </script>
+</body>
+</html>

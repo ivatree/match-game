@@ -1,0 +1,94 @@
+main{
+    display: grid;
+    justify-content: center;
+    .rules{
+        margin-top: 47px;
+        margin-left: 32px;
+        width: 1000px;
+        height: 802px;
+        border-radius: 5px 0px 0px 0px;
+        background-color: #0000000D;
+        border-radius: 5px;
+        padding-top: 31px;
+        h2{
+            width: 296px;
+            height: 30px;
+            margin-left: 56px;
+            font-family: Roboto;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 30px;
+            letter-spacing: 0.3px;
+            text-align: left;
+            margin-bottom: 29px;
+            .player{
+                width: 846px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                .avatar{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100%;
+                    margin-right: 13px;
+                }
+                .inf{
+                    padding-bottom: 21px;
+                    width: 703px;
+                    height: 100%;
+                    line-height: 7px;
+
+                    .FIO{
+                        width: 703px;
+                        font-family: Roboto;
+                        font-size: 14px;
+                        font-weight: 500;
+                        letter-spacing: 0.10000000149011612px;
+                        text-align: left;
+                    }
+                    .email{
+                        width: 703px;
+                        height: 10px;
+                        left: 56px;
+                        font-family: Roboto;
+                        font-size: 12px;
+                        font-weight: 400;
+                        letter-spacing: 0.4000000059604645px;
+                        text-align: left;
+                        color: rgb(66, 66, 66);
+                    }
+                 
+                }
+                .score{
+                    width: 100px;
+                    height: 24px;
+                    font-family: Roboto;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    letter-spacing: 0.15000000596046448px;
+                    text-align: left;
+                    padding-top: 2px;
+                }
+                span{
+                    font-family: Roboto;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    letter-spacing: 0.15000000596046448px;
+                    margin-left: 3px;
+                }
+               
+            }
+
+            hr{
+                width: 846px;
+                height: 0;
+                border: none solid #ddd;
+                opacity: 40%;
+                margin-top: 15px;
+                margin-bottom: 12px;
+            }            
+        }
+    }
+}
